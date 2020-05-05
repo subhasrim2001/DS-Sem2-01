@@ -1,6 +1,9 @@
+#include <iostream>
+#include "HuffmanInput.h"
 
-
-oid HuffmanInput::set_size(int s, int h)
+using namespace std;
+void printArr(int []);
+void HuffmanInput::set_size(int s, int h)
 {
     int i;
     size=s;

@@ -1,10 +1,11 @@
 #ifndef HUFFMANINPUT_H_INCLUDED
 #define HUFFMANINPUT_H_INCLUDED
+#include <string>
 
 class HuffmanInput //To handle the Input Operations
 {
     public:
-    string input;
+    std::string input;
     int size; //total char present
     int count; //current values filled
     int **code;

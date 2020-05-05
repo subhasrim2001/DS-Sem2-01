@@ -1,14 +1,11 @@
 #ifndef NODE_H_INCLUDED
 #define NODE_H_INCLUDED
 
-Node* getNode(char d, int f)
+class Node
 {
-    Node *cur = new Node;
-    cur->left = NULL;
-    cur->right = NULL;
-    cur->data = d;
-    cur->frequency = f;
-    return cur;
-}
-
+    public:
+    char data;
+    int frequency;
+    Node *left, *right;
+};
 #endif // NODE_H_INCLUDED

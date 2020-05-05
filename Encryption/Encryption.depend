@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1588690180 source:g:\git\ds-sem2-01\encryption\huffmaninput.cpp
+	<iostream>
+	"HuffmanInput.h"
+
+1588690117 g:\git\ds-sem2-01\encryption\huffmaninput.h
+	<string>
+

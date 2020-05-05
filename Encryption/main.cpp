@@ -1,5 +1,7 @@
 #include <iostream>
-
+#include "HuffmanInput.h"
+#include "Node.h"
+#include "MinHeap.h"
 using namespace std;
 
 void printArr(int arr[])
