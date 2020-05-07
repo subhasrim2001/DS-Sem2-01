@@ -35,6 +35,8 @@
 		<Unit filename="HuffmanInput.cpp" />
 		<Unit filename="HuffmanInput.h" />
 		<Unit filename="MinHeap.h" />
+		<Unit filename="Minheap.cpp" />
+		<Unit filename="Node.cpp" />
 		<Unit filename="Node.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
