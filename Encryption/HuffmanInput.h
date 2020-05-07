@@ -11,10 +11,10 @@ class HuffmanInput //To handle the Input Operations
     int **code;
     char *d;
     void set_size(int, int);
-    void sendCode(char, int [], int );
+    void sendCode(char, int [], int);
     void printCode();
     HuffmanInput();
     ~HuffmanInput();
-}H;
+};
 
 #endif // HUFFMANINPUT_H_INCLUDED
