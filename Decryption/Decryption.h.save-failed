@@ -1,0 +1,13 @@
+#ifndef DECRYPTION_H_INCLUDED
+#define DECRYPTION_H_INCLUDED
+#include "Node.h"
+
+class Decryption
+{
+    Node* head;
+public:
+    Decryption();
+    void addNode(Node)
+};
+
+#endif // DECRYPTION_H_INCLUDED

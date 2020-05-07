@@ -164,9 +164,103 @@ void HuffmanEncryption(char data[], int freq[], int size)
     H.set_size(size, height+1);
     storeCodes(root, arr, index);
 }
-
 int main()
 {
-    cout << "Hello world!" << endl;
+    int A[40]={0}, i, n, count, j;
+    /*Getting input*/
+    cout<<"\nEnter input string:";
+    getline(cin, H.input);
+    /*Obtaining frequency*/
+    n=H.input.length();
+    for(i=0; i<n; i++)
+    {
+        if(isalpha(H.input[i]))
+        {
+            H.input[i]=toupper(H.input[i]);
+            A[H.input[i]-65]++;
+        }
+        else if(isdigit(H.input[i]))
+        {
+            A[H.input[i]-22]++;
+        }
+        else
+        {
+            switch(H.input[i])
+            {
+                case ' ':   {
+                                A[36]++;
+                                break;
+                            }
+                case '.':   {
+                                A[37]++;
+                                break;
+                            }
+                case '?':   {
+                                A[38]++;
+                                break;
+                            }
+                case '!':   {
+                                A[39]++;
+                                break;
+                            }
+                default:    {
+                                break;
+                            }
+            }
+        }
+    }
+    count=0; //no of characters
+    for(i=0; i<40; i++)
+    {
+        if(A[i]!=0)
+        {
+            count++;
+        }
+    }
+    char *data= new char[count];
+    int *freq=new int[count];
+    j=0;
+    for(i=0; i<40; i++)
+    {
+        if(A[i]!=0)
+        {
+            if(i<26)
+            {
+                data[j]='A'+i;
+            }
+            else if(i<36)
+            {
+                data[j]='0'+i-26;
+            }
+            else
+            {
+                switch(i)
+                {
+                    case 36:    {
+                                    data[j]=' ';
+                                    break;
+                                }
+                    case 37:    {
+                                    data[j]='.';
+                                    break;
+                                }
+                    case 38:    {
+                                    data[j]='?';
+                                    break;
+                                }
+                    case 39:    {
+                                    data[j]='!';
+                                    break;
+                                }
+                }
+            }
+            freq[j]=A[i];
+            j++;
+        }
+    }
+    /*Frequency with data obtained*/
+    /*Huffman Encryption- Part 1*/
+    HuffmanEncryption(data, freq, count);
     return 0;
 }
+
