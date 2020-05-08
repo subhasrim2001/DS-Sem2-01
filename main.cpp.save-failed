@@ -4,7 +4,7 @@
 #include "MinHeap.h"
 
 using namespace std;
-HuffmanInput H;
+
 void printArr(int arr[])
 {
     int i;
@@ -63,7 +63,7 @@ MinHeap* constructMinHeap(int size)
     minHeap->max_size = size;
     minHeap->arr = new Node*[minHeap->max_size];
     //may require allocation to each node
-    return minHeap;
+
 }
 MinHeap* constructAndMakeMinHeap(char data[], int freq[], int size)
 {
@@ -104,7 +104,7 @@ Node* makeHuffmanTree(char data[], int freq[], int size)
 {
     Node *left, *right, *parent;
     MinHeap* minHeap = constructAndMakeMinHeap(data, freq, size); //make a min-heap
-    while(!(HeapConstructed(minHeap)))
+    while(!HeapConstructed)
     {
         left = returnMinNode(minHeap);
         right = returnMinNode(minHeap);
