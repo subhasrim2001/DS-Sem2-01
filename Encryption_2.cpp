@@ -79,7 +79,7 @@ class Encryption
 {
     List list;
 public:
-    void encrypt(char*, char);
+    void encrypt(char*, char, int);
 };
 
 int main()
@@ -107,5 +107,7 @@ int main()
     for (int i = 0; i < input_length; i++)
         cout << char_array[i];
     cout << "keyword: " << keyword;
+
+    obj.encrypt(char_array, keyword, input_length);
     return 0;
 }
